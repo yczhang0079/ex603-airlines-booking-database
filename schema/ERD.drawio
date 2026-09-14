@@ -58,10 +58,10 @@
         <mxCell id="Uy_NfWfkprFhnqPYEsp--22" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" value="&lt;u&gt;flight_id&lt;/u&gt;" vertex="1">
           <mxGeometry height="50" width="105" x="590" y="410" as="geometry" />
         </mxCell>
-        <mxCell id="Uy_NfWfkprFhnqPYEsp--23" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" value="&lt;u&gt;airport_code&lt;/u&gt;" vertex="1">
+        <mxCell id="Uy_NfWfkprFhnqPYEsp--23" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" value="airport_code" vertex="1">
           <mxGeometry height="50" width="105" x="630" y="495" as="geometry" />
         </mxCell>
-        <mxCell id="Uy_NfWfkprFhnqPYEsp--24" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" value="sequence_number" vertex="1">
+        <mxCell id="Uy_NfWfkprFhnqPYEsp--24" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" value="&lt;u&gt;sequence_number&lt;/u&gt;" vertex="1">
           <mxGeometry height="50" width="105" x="607.5" y="580" as="geometry" />
         </mxCell>
         <mxCell id="Uy_NfWfkprFhnqPYEsp--25" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" value="create" vertex="1">
