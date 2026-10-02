@@ -13,3 +13,26 @@ The design needs to support day-to-day questions an airline's operations and fin
 Beyond individual lookups, the schema is built to answer aggregate and relational questions that span multiple tables — for example, identifying the busiest airports by counting how many flights route through them, ranking flights by revenue using the `fare_paid` metric in `Bookings`, or filtering flights by their base fare and active status to power search and pricing features. The separation of `Flights` (the supply-side entity) from `Flight_routes` (the many-to-many link to `Airports`) also allows the system to model multi-stop or connecting flights without duplicating flight-level data, keeping the schema normalized while remaining flexible enough to grow with additional route complexity.
 
 ![Airline booking ERD](schema/ERD.png)
+
+## Schema
+
+`schema.sql` builds an airline booking database on PostgreSQL 14+. It resets itself first, so it can be re-run on the same database.
+
+| Table | Purpose |
+|---|---|
+| `passengers` | People who book tickets. |
+| `flights` | Scheduled flights, with a base fare and an `is_active` flag. |
+| `airports` | Reference list keyed by three-letter airport code. |
+| `bookings` | One passenger on one flight, with the fare actually paid. |
+| `flight_routes` | The ordered airport stops of each flight. |
+
+**Design decisions to notice**
+
+- **Creation order:** `passengers`, `flights`, `airports`, `bookings`, `flight_routes`. The first three reference nothing, and there are no cycles.
+- **Composite key:** `flight_routes` is keyed by `(flight_id, sequence_number)`, so a flight has many ordered stops and no stop number repeats.
+- **Natural key:** `airports` uses the airport code as its primary key instead of a generated id.
+- **Paid vs. base fare:** `bookings.fare_paid` is stored separately from `flights.base_fair`, because the base fare can change after a ticket is sold.
+- **Deletes:** bookings use `RESTRICT` on passengers and flights, so payment records cannot vanish. Route stops `CASCADE` with their flight. Retire a flight by setting `is_active` to `FALSE` instead of deleting it.
+- **CHECK constraints:** fares cannot be negative, airport codes must be three uppercase letters, and stop numbers start at 1.
+
+Full reasoning is in `analysis/unit2.md`.
