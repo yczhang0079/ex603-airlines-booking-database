@@ -1,0 +1,7 @@
+## Finding: Disputed‑Event Actor Identification
+
+The dashboard currently reports that only a small number of passengers were involved in disputed events. After reviewing the underlying data, that conclusion is incorrect. The dashboard’s filter excluded passengers whose dispute records were missing a reason, even though those records still represent genuine disputes. In other words, the dashboard counted only disputes with a labeled cause and silently ignored all the others. This created the appearance that far fewer passengers were affected than the data actually shows.
+
+When we examined the full dataset, including the records with missing dispute reasons, we found that the number of affected passengers is significantly higher. The discrepancy came from the way the dashboard’s query was written: it treated missing dispute reasons as if the dispute did not exist. Because of that, the payout freeze was based on incomplete information. The correct interpretation is that all disputes—labeled or unlabeled—should be included when determining which passengers were involved.
+
+Given this, the frozen payout should not be released yet. The team needs to update the dashboard to include all disputed events, regardless of whether a reason was recorded. Once the corrected numbers are reflected in the dashboard, the payout decision can be revisited with accurate information.
