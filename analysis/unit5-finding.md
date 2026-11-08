@@ -1,0 +1,5 @@
+* Flights that never started (VN214, NV215):
+ Flights that never started should be investigated individually to determine why they were never scheduled or operated. Possible reasons include scheduling errors, aircraft availability issues, crew shortages, or missing flight approvals. The priority is to identify the cause and correct it so future flights can be launched as planned. Since these flights generated no service at all, resolving the startup issue should be the first focus.
+
+* Flights that fail often (VN202, VN206, VN209, VN211):
+ Flights that frequently fail or are canceled require a different response. The airline should analyze the common causes, such as maintenance problems, weather-related disruptions, staffing shortages, or operational bottlenecks. Once the main causes are identified, targeted improvements can be made to reduce cancellations and improve reliability. These flights are operating but performing poorly, so the goal is to improve consistency rather than simply get them started.
