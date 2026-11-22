@@ -92,9 +92,7 @@ The next improvement would be to load a larger time-series dataset with one row 
 
 ## Video presentation
 
-**Presentation video:** [Add the course presentation video or link here](https://example.com)
-
-Replace the example link with the YouTube, Panopto, Loom, or other course-approved URL before submission.
+**Presentation video:** [EX603 - Analyzing Airline Bookings with SQL Window Functions](https://youtu.be/nlWRSA9fSrg)
 
 ## How to run it
 
